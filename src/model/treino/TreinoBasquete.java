@@ -3,6 +3,7 @@ package model.treino;
 import java.time.LocalDate;
 
 public class TreinoBasquete extends Treino {
+
     public TreinoBasquete(LocalDate data, int duracaoMinutos, String descricao) {
         super(data, duracaoMinutos, descricao);
     }
@@ -12,6 +13,6 @@ public class TreinoBasquete extends Treino {
 
     @Override
     public String gerarFichaTecnica() {
-        return "[Basquete] " + data.format(FMT) + " | " + duracaoMinutos + " min | " + descricao;
+        return "[Basquete] " + getDataFormatada() + " | " + duracaoMinutos + " min | " + descricao;
     }
 }
